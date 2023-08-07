@@ -1,0 +1,22 @@
+class Solution{
+public:	
+	// Function returns the second
+	// largest elements
+	int print2largest(int arr[], int n) {
+	    // code here
+	    int large=arr[0],max2=-1;
+	    for(int i=1;i<n;i++)
+	    {
+	        if(arr[i]>large)
+	        {
+	            max2=large;
+	            large=arr[i];
+	        }
+	        else if(arr[i]<large&&arr[i]>max2)
+	        {
+	            max2=arr[i];
+	        }
+	    }
+	    return max2;
+	}
+};
