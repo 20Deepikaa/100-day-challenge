@@ -1,0 +1,25 @@
+bool check(int* nums, int size){
+    int rotationIndex = 0;
+    for (int i = 1; i < size; i++) {
+        if (nums[i] < nums[i - 1]) {
+            rotationIndex = i;
+            break;
+        }
+    }
+    
+    if (rotationIndex == 0) {
+        return true;
+    }
+    
+    for (int i = rotationIndex; i < size - 1; i++) {
+        if (nums[i] > nums[i + 1]) {
+            return false;
+        }
+    }
+    
+    if (nums[size - 1] > nums[0]) {
+        return false;
+    }
+    
+    return true;
+}
