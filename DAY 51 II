@@ -1,0 +1,15 @@
+class Solution {
+    void pushZerosToEnd(int[] arr, int n) {
+        int Z = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] != 0) {
+                arr[Z] = arr[i];
+                Z++;
+            }
+        }
+        while (Z < n) {
+            arr[Z] = 0;
+            Z++;
+        }
+    }
+}
