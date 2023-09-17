@@ -1,0 +1,13 @@
+def getFloorAndCeil(arr, n, x):
+    # code here
+     floor = -1
+     ceil = -1
+     for i in range(n):
+        if arr[i] == x:
+            return (x, x)
+        if arr[i] < x and arr[i] > floor:
+            floor = arr[i]
+        if arr[i] > x and (ceil == -1 or arr[i] < ceil):
+            ceil = arr[i]
+            
+            return (floor, ceil)
